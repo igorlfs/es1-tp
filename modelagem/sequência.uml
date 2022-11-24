@@ -1,0 +1,13 @@
+
+              ┌────┐
+              │Eyes│
+              └─┬──┘
+ PlantUML Enters│
+ ───────────────>
+              ┌─┴──┐
+              │Eyes│
+              └────┘
+
+@startuml
+-> Eyes: PlantUML Enters 
+@enduml
