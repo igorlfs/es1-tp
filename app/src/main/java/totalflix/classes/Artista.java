@@ -1,27 +1,26 @@
 package totalflix.classes;
 
+import java.time.LocalDate;
+
 public class Artista {
 
     private int idArtista;
     private String nomeArtista;
     protected String biografia;
-    private LocalDate dataNascArtista;
+    private LocalDate dataNascimento;
     private LocalDate dataFalecimento;
 
-    public Artista(int idArtista, String nomeArtista, String biografia, LocalDate dataNascArtista, LocalDate dataFalecimento) {
+    public Artista(int idArtista, String nomeArtista, String biografia, LocalDate dataNascArtista,
+            LocalDate dataFalecimento) {
         this.idArtista = idArtista;
         this.nomeArtista = nomeArtista;
         this.biografia = biografia;
-        this.dataNascArtista = dataNascArtista;
+        this.dataNascimento = dataNascArtista;
         this.dataFalecimento = dataFalecimento;
     }
 
     public int getIdArtista() {
         return idArtista;
-    }
-
-    public LocalDate getDataFalecimento() {
-        return dataFalecimento;
     }
 
     public String getNomeArtista() {
@@ -32,19 +31,31 @@ public class Artista {
         return biografia;
     }
 
-    public LocalDate getDataNascArtista() {
-        return dataNascArtista;
+    public LocalDate getDataNascimento() {
+        return dataNascimento;
     }
 
-    public String mudarNome(String nomeArtista) {
+    public LocalDate getDataFalecimento() {
+        return dataFalecimento;
+    }
+
+    public void setIdArtista(int idArtista) {
+        this.idArtista = idArtista;
+    }
+
+    public void setNomeArtista(String nomeArtista) {
         this.nomeArtista = nomeArtista;
     }
 
-    public String mudarBiografia(String biografia) {
+    public void setBiografia(String biografia) {
         this.biografia = biografia;
     }
-    
-    public LocalDate setDataFalecimento(LocalDate dataFalecimento) {
+
+    public void setDataNascimento(LocalDate dataNascArtista) {
+        this.dataNascimento = dataNascArtista;
+    }
+
+    public void setDataFalecimento(LocalDate dataFalecimento) {
         this.dataFalecimento = dataFalecimento;
     }
 }

@@ -11,7 +11,8 @@ public class Pessoa {
     private String endereco;
     private String dataAdmissao;
 
-    public Pessoa(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco, String dataAdmissao) {
+    public Pessoa(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco,
+            String dataAdmissao) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;
@@ -21,40 +22,69 @@ public class Pessoa {
         this.endereco = endereco;
         this.dataAdmissao = dataAdmissao;
     }
-    
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getEmail() {
-        return email;
-    }
 
     public int getId() {
         return id;
+    }
+
+    public String getCpf() {
+        return cpf;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void getDataAdmissao() {
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public String getDataAdmissao() {
         return dataAdmissao;
     }
 
-    public void mudarSenha(String senha) {
-        this.senha = senha;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public void mudarEmail(String email) {
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public void mudarEndereco(String endereco) {
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
 
-    public void mudarNome(String nome) {
-        this.nome = nome;
+    public void setDataAdmissao(String dataAdmissao) {
+        this.dataAdmissao = dataAdmissao;
     }
+
 }

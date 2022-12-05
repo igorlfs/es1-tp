@@ -1,5 +1,7 @@
 package totalflix.classes;
 
+import java.time.LocalDate;
+
 public class Episodio {
 
     private int idEp;
@@ -11,7 +13,8 @@ public class Episodio {
     protected String tituloEp;
     protected String descricaoEp;
 
-    public Episodio(int idEp, int duracaoEp, int temporada, int idSerie, int numEp, LocalDate dataLancamento, String tituloEp, String descricaoEp) {
+    public Episodio(int idEp, int duracaoEp, int temporada, int idSerie, int numEp, LocalDate dataLancamento,
+            String tituloEp, String descricaoEp) {
         this.idEp = idEp;
         this.duracaoEp = duracaoEp;
         this.temporada = temporada;
@@ -54,23 +57,36 @@ public class Episodio {
         return descricaoEp;
     }
 
-    public String mudarTitulo(String tituloEp) {
-        this.tituloEp = tituloEp;
+    public void setIdEp(int idEp) {
+        this.idEp = idEp;
     }
 
-    public String mudarDescricao(String descricaoEp) {
-        this.descricaoEp = descricaoEp;
+    public void setDuracaoEp(int duracaoEp) {
+        this.duracaoEp = duracaoEp;
     }
 
-    public LocalDate mudarDataLancamento(LocalDate dataLancamento) {
-        this.dataLancamento = dataLancamento;
+    public void setTemporada(int temporada) {
+        this.temporada = temporada;
     }
 
-    public int mudarNumEp(int numEp) {
+    public void setIdSerie(int idSerie) {
+        this.idSerie = idSerie;
+    }
+
+    public void setNumEp(int numEp) {
         this.numEp = numEp;
     }
 
-    public int mudarDuracao(int duracaoEp) {
-        this.duracaoEp = duracaoEp;
+    public void setDataLancamento(LocalDate dataLancamento) {
+        this.dataLancamento = dataLancamento;
     }
+
+    public void setTituloEp(String tituloEp) {
+        this.tituloEp = tituloEp;
+    }
+
+    public void setDescricaoEp(String descricaoEp) {
+        this.descricaoEp = descricaoEp;
+    }
+
 }

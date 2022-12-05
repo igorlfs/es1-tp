@@ -9,7 +9,8 @@ public class Conteudo {
     protected int anoLancamento;
     protected String produtora;
 
-    public Conteudo(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora) {
+    public Conteudo(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento,
+            String produtora) {
         this.idConteudo = idConteudo;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -17,7 +18,7 @@ public class Conteudo {
         this.anoLancamento = anoLancamento;
         this.produtora = produtora;
     }
-    
+
     public int getIdConteudo() {
         return idConteudo;
     }

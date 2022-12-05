@@ -5,9 +5,18 @@ public class Filme extends Conteudo {
     private int duracao;
     private String categoria;
 
-    public Filme(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora, int duracao) {
+    public Filme(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora,
+            int duracao) {
         super(idConteudo, titulo, descricao, categoria, anoLancamento, produtora);
         this.duracao = duracao;
+    }
+
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public String getCategoria() {
+        return categoria;
     }
 
     public void setDuracao(int duracao) {
@@ -18,11 +27,4 @@ public class Filme extends Conteudo {
         this.categoria = categoria;
     }
 
-    public int getDuracao() {
-        return duracao;
-    }
-    
-    public String getCategoria() {
-        return categoria;
-    }
 }
