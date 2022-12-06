@@ -1,60 +1,104 @@
 package totalflix.classes;
 
-public class Pessoa {
+import java.util.ArrayList;
 
-    private int id;
-    private String cpf;
-    protected String nome;
-    protected String dataNascimento;
-    private String email;
-    private String senha;
-    private String endereco;
-    private String dataAdmissao;
+public abstract class Pessoa {
 
-    public Pessoa(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco, String dataAdmissao) {
-        this.id = id;
-        this.cpf = cpf;
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-        this.email = email;
-        this.senha = senha;
-        this.endereco = endereco;
-        this.dataAdmissao = dataAdmissao;
-    }
-    
-    public String getCpf() {
-        return cpf;
-    }
+	protected int id;
+	protected String cpf;
+	protected String nome;
+	protected String dataNascimento;
+	protected String email;
+	protected String senha;
+	protected String endereco;
+	protected String dataAdmissao;
+	protected ArrayList<Perfil> perfis;
 
-    public String getEmail() {
-        return email;
-    }
+	public Pessoa(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco, String dataAdmissao) {
+		this.id = id;
+		this.cpf = cpf;
+		this.nome = nome;
+		this.dataNascimento = dataNascimento;
+		this.email = email;
+		this.senha = senha;
+		this.endereco = endereco;
+		this.dataAdmissao = dataAdmissao;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
 
-    public void getDataAdmissao() {
-        return dataAdmissao;
-    }
+	public String getEndereco() {
+		return endereco;
+	}
 
-    public void mudarSenha(String senha) {
-        this.senha = senha;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public void mudarEmail(String email) {
-        this.email = email;
-    }
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-    public void mudarEndereco(String endereco) {
-        this.endereco = endereco;
-    }
+	public void setDataAdmissao(String dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
 
-    public void mudarNome(String nome) {
-        this.nome = nome;
-    }
+	public String getCpf() {
+		return cpf;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setEndereco(String endereco) {
+		this.endereco = endereco;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public ArrayList<Perfil> getPerfis() {
+		return perfis;
+	}
+
+	public void setPerfis(ArrayList<Perfil> perfis) {
+		this.perfis = perfis;
+	}
+
+	public void addPerfil(Perfil perfil) {
+		perfis.add(perfil);
+	}
+
 }
