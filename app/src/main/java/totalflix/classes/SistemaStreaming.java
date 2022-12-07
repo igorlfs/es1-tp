@@ -4,116 +4,113 @@ import java.util.ArrayList;
 
 public class SistemaStreaming {
 
-	private boolean logado;
-	private Pessoa pessoaLogada;
-	private ArrayList<Pessoa> pessoas;
-	private ArrayList<Conteudo> conteudos;
+    private boolean logado;
+    private Pessoa pessoaLogada;
+    private ArrayList<Pessoa> pessoas;
+    private ArrayList<Conteudo> conteudos;
 
+    public Pessoa gePessoaLogada() {
+        return pessoaLogada;
+    }
 
-	public Pessoa gePessoaLogada() {
-		return pessoaLogada;
-	}
+    public void setPessoaLogada(Pessoa pessoaLogada) {
+        this.pessoaLogada = pessoaLogada;
+    }
 
+    private static SistemaStreaming sistemaInstancia = new SistemaStreaming();
 
-	public void setPessoaLogada(Pessoa pessoaLogada) {
-		this.pessoaLogada = pessoaLogada;
-	}
+    // Será implementado no futuro
+    private SistemaStreaming() {
+    }
 
-	private static SistemaStreaming sistemaInstancia = new SistemaStreaming();
+    public boolean isLogado() {
+        return logado;
+    }
 
-	private SistemaStreaming() {
-	}
+    public void setLogado(boolean logado) {
+        this.logado = logado;
+    }
 
+    public void setPessoas(ArrayList<Pessoa> pessoas) {
+        this.pessoas = pessoas;
+    }
 
-	public boolean isLogado() {
-		return logado;
-	}
+    public void setConteudos(ArrayList<Conteudo> conteudos) {
+        this.conteudos = conteudos;
+    }
 
+    public static SistemaStreaming getInstance() {
+        return sistemaInstancia;
+    }
 
-	public void setLogado(boolean logado) {
-		this.logado = logado;
-	}
+    public void addUsuario(Usuario usuario) {
+        pessoas.add(usuario);
+    }
 
-	public void setPessoas(ArrayList<Pessoa> pessoas) {
-		this.pessoas = pessoas;
-	}
+    public void addConteudo(Conteudo conteudo) {
+        conteudos.add(conteudo);
+    }
 
-	public void setConteudos(ArrayList<Conteudo> conteudos) {
-		this.conteudos = conteudos;
-	}
+    public void fazerLogin(String email, String senha) {
+        for (Pessoa pessoa : pessoas) {
+            if ((pessoa) instanceof Usuario) {
+                if (pessoa.getEmail() == email) {
+                    if (pessoa.getSenha() == senha) {
+                        logado = true;
+                        pessoaLogada = (Usuario) pessoa;
+                        alertLogado("Usuario");
+                    }
+                }
+            } else if ((pessoa) instanceof Administrador) {
+                if (pessoa.getEmail() == email) {
+                    if (pessoa.getSenha() == senha) {
+                        logado = true;
+                        pessoaLogada = (Administrador) pessoa;
+                        alertLogado("Admin");
+                    }
+                }
+            }
+        }
+    }
 
-	public static SistemaStreaming getInstance() {
-		return sistemaInstancia;
-	}
+    public void fazerLogout() {
+        if (logado) {
+            System.out.println("Usuário Deslogado");
+            this.logado = false;
+            this.pessoaLogada = null;
+        } else {
+            System.out.println("Nenhum usuário logado");
+        }
+    }
 
-	public void addUsuario(Usuario usuario) {
-		pessoas.add(usuario);
-	}
+    public void alertLogado(String alert) {
+        if (logado)
+            System.out.println(alert + " logado: " + pessoaLogada.getNome());
+        else
+            System.out.println("Nenhum " + alert + " logado");
+    }
 
-	public void addConteudo(Conteudo conteudo) {
-		conteudos.add(conteudo);
-	}
+    public void listarConteudos() {
+        System.out.println("Conteúdos: \n");
+        String tipo;
+        for (Conteudo conteudo : conteudos) {
+            if ((conteudo) instanceof Filme) {
+                tipo = "Filme";
+            } else {
+                tipo = "Serie";
+            }
+            System.out.println(tipo + ": " + conteudo.getTitulo() + "\n");
+        }
+    }
 
-	public void fazerLogin(String email,String senha) {
-		for (Pessoa pessoa: pessoas) {
-			if((pessoa) instanceof Usuario) {
-			if(pessoa.getEmail() == email) {
-				if(pessoa.getSenha() == senha) {
-					logado = true;
-					pessoaLogada = (Usuario) pessoa;
-					alertLogado("Usuario");
-				}
-			}
-			}else if((pessoa) instanceof Administrador) {
-				if(pessoa.getEmail() == email) {
-					if(pessoa.getSenha() == senha) {
-						logado = true;
-						pessoaLogada = (Administrador) pessoa;
-						alertLogado("Admin");
-					}
-				}
-			}
-		}
-	}
-
-	public void fazerLogout() {
-		if(logado) {
-		System.out.println("Usuário Deslogado");
-		this.logado=false;
-		this.pessoaLogada = null;
-		}else {
-			System.out.println("Nenhum usuário logado");
-		}
-	}
-
-	public void alertLogado(String alert) {
-		if(logado)
-			System.out.println(alert+" logado: "+pessoaLogada.getNome());
-		else
-			System.out.println("Nenhum "+ alert+" logado");
-	}
-
-	public void listarConteudos() {
-		System.out.println("Conteúdos: \n");
-		String tipo;
-		for(Conteudo conteudo: conteudos) {
-			if((conteudo) instanceof Filme) {
-				tipo = "Filme";
-			}else {
-				tipo = "Serie";
-			}
-			System.out.println(tipo+": "+conteudo.getTitulo()+"\n");
-		}
-	}
-	
-	public void listarUsuarios() {
-		if(logado==true && pessoaLogada instanceof Administrador) {
-		System.out.println("Usuários: \n");
-		for(Pessoa pessoa: pessoas) {
-			System.out.println("Nome: "+pessoa.getNome()+"\n");
-		}
-	}else {
-	System.out.println("Apenas administradores podem ver a listagem de usuários");	
-	}
-	}
+    public void listarUsuarios() {
+        if (logado == true && pessoaLogada instanceof Administrador) {
+            System.out.println("Usuários: \n");
+            for (Pessoa pessoa : pessoas) {
+                System.out.println("Nome: " + pessoa.getNome() + "\n");
+            }
+        } else {
+            System.out.println("Apenas administradores podem ver a listagem de usuários");
+        }
+    }
 }
