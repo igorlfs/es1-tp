@@ -101,4 +101,8 @@ public abstract class Conteudo {
 	public void setProdutora(String produtora) {
 		this.produtora = produtora;
 	}
+	
+	public void addLegenda(String legenda) {
+		this.legendas.add(legenda);
+	}
 }

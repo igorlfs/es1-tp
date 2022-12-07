@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 
+import org.junit.Test;
+
 import totalflix.classes.Artista;
 import totalflix.classes.Classificacao;
 import totalflix.classes.Episodio;
@@ -39,7 +41,8 @@ public class SerieTest {
 		assertEquals(1, serie.getArtistas().size());
 		assertEquals(1, serie.getEpisodios().size());
 	}
-
+	
+	@Test
 	public void testSerieEpisodio() {
 		ArrayList<Artista> artistas = new ArrayList<>();
 		artistas.add(new Artista(1, "João da Silva", "Biografia de João da Silva", "01/01/1900", "01/01/2000"));

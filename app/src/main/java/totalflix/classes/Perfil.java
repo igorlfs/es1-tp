@@ -36,4 +36,8 @@ public class Perfil {
 	public void setHistorico(ArrayList<Conteudo> historico) {
 		this.historico = historico;
 	}
+	
+	public void addConteudoHistorico(Conteudo conteudo) {
+		this.historico.add(conteudo);
+	}
 }

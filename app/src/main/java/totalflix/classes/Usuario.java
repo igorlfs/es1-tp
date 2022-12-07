@@ -23,7 +23,7 @@ public class Usuario extends Pessoa {
 		this.mesGratuito = true;
 	}
 
-	public boolean isMesGratuito() {
+	public boolean isMesGratuitoAtivo() {
 		return mesGratuito;
 	}
 

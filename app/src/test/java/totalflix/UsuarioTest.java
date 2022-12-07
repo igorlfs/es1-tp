@@ -28,9 +28,9 @@ public class UsuarioTest {
 	public void testMesGratuito() {
 		MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
 		Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com", "senha123", "Rua das Flores, 123", "01/01/2020", "01/02/2020", true, metodoPgto);
-		assertEquals(true, usuario.isMesGratuito());
+		assertEquals(true, usuario.isMesGratuitoAtivo());
 		usuario.encerrarGratuitade();
-		assertEquals(false, usuario.isMesGratuito());
+		assertEquals(false, usuario.isMesGratuitoAtivo());
 	}
 
 
