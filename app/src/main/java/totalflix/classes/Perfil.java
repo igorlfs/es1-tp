@@ -8,7 +8,7 @@ public class Perfil {
     private boolean restricaoInfantil;
     private ArrayList<Conteudo> historico;
 
-    public Perfil(String nomePerfil, boolean restricaoInfantil) {
+    public Perfil(final String nomePerfil, final boolean restricaoInfantil) {
         this.nomePerfil = nomePerfil;
         this.restricaoInfantil = restricaoInfantil;
     }
@@ -17,7 +17,7 @@ public class Perfil {
         return restricaoInfantil;
     }
 
-    public void setRestricaoInfantil(boolean restricaoInfantil) {
+    public void setRestricaoInfantil(final boolean restricaoInfantil) {
         this.restricaoInfantil = restricaoInfantil;
     }
 
@@ -25,7 +25,7 @@ public class Perfil {
         return nomePerfil;
     }
 
-    public void setNomePerfil(String nomePerfil) {
+    public void setNomePerfil(final String nomePerfil) {
         this.nomePerfil = nomePerfil;
     }
 
@@ -33,11 +33,11 @@ public class Perfil {
         return historico;
     }
 
-    public void setHistorico(ArrayList<Conteudo> historico) {
+    public void setHistorico(final ArrayList<Conteudo> historico) {
         this.historico = historico;
     }
 
-    public void addConteudoHistorico(Conteudo conteudo) {
+    public void addConteudoHistorico(final Conteudo conteudo) {
         this.historico.add(conteudo);
     }
 }

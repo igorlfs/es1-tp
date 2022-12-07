@@ -7,19 +7,21 @@ public class Filme extends Conteudo {
     private int duracao;
     private String categoria;
 
-    public Filme(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora,
-            int duracao, Classificacao classificacao, ArrayList<Artista> artistas, ArrayList<String> legendas,
-            ArrayList<String> audios) {
+    public Filme(final int idConteudo, final String titulo, final String descricao, final String categoria,
+            final int anoLancamento, final String produtora,
+            final int duracao, final Classificacao classificacao, final ArrayList<Artista> artistas,
+            final ArrayList<String> legendas,
+            final ArrayList<String> audios) {
         super(idConteudo, titulo, descricao, categoria, anoLancamento, produtora, classificacao, artistas, legendas,
                 audios);
         this.duracao = duracao;
     }
 
-    public void setDuracao(int duracao) {
+    public void setDuracao(final int duracao) {
         this.duracao = duracao;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(final String categoria) {
         this.categoria = categoria;
     }
 

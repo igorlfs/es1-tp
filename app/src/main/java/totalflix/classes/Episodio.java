@@ -2,16 +2,17 @@ package totalflix.classes;
 
 public class Episodio {
 
-    private int idEp;
+    private final int idEp;
     private int duracaoEp;
-    private int temporada;
+    private final int temporada;
     private int numEp;
     private String dataLancamento;
     private String tituloEp;
     private String descricaoEp;
 
-    public Episodio(int idEp, int duracaoEp, int temporada, int numEp, String dataLancamento, String tituloEp,
-            String descricaoEp) {
+    public Episodio(final int idEp, final int duracaoEp, final int temporada, final int numEp,
+            final String dataLancamento, final String tituloEp,
+            final String descricaoEp) {
         this.idEp = idEp;
         this.duracaoEp = duracaoEp;
         this.temporada = temporada;
@@ -49,23 +50,23 @@ public class Episodio {
         return descricaoEp;
     }
 
-    public void setTitulo(String tituloEp) {
+    public void setTitulo(final String tituloEp) {
         this.tituloEp = tituloEp;
     }
 
-    public void setDescricao(String descricaoEp) {
+    public void setDescricao(final String descricaoEp) {
         this.descricaoEp = descricaoEp;
     }
 
-    public void setDataLancamento(String dataLancamento) {
+    public void setDataLancamento(final String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
-    public void setNumEp(int numEp) {
+    public void setNumEp(final int numEp) {
         this.numEp = numEp;
     }
 
-    public void setDuracao(int duracaoEp) {
+    public void setDuracao(final int duracaoEp) {
         this.duracaoEp = duracaoEp;
     }
 }

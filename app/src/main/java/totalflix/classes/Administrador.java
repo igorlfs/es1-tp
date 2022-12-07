@@ -5,14 +5,15 @@ public class Administrador extends Pessoa {
     private int nivelAcesso;
     private String cargo;
 
-    public Administrador(int id, String cpf, String nome, String dataNascimento, String email, String senha,
-            String endereco, String dataCriacao, int nivelAcesso, String cargo) {
+    public Administrador(final int id, final String cpf, final String nome, final String dataNascimento,
+            final String email, final String senha,
+            final String endereco, final String dataCriacao, final int nivelAcesso, final String cargo) {
         super(id, cpf, nome, dataNascimento, email, senha, endereco, dataCriacao);
         this.nivelAcesso = nivelAcesso;
         this.cargo = cargo;
     }
 
-    public void setCargo(String cargo) {
+    public void setCargo(final String cargo) {
         this.cargo = cargo;
     }
 
@@ -20,7 +21,7 @@ public class Administrador extends Pessoa {
         return cargo;
     }
 
-    public void setNivelAcesso(int nivelAcesso) {
+    public void setNivelAcesso(final int nivelAcesso) {
         this.nivelAcesso = nivelAcesso;
     }
 
@@ -32,7 +33,7 @@ public class Administrador extends Pessoa {
         return dataAdmissao;
     }
 
-    public void setDataAdmissao(String dataAdmissao) {
+    public void setDataAdmissao(final String dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
 }

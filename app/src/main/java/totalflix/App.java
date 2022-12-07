@@ -23,25 +23,28 @@ public class App {
     }
 
     public static ArrayList<Pessoa> gerarPessoas() {
-        Usuario usuario1 = new Usuario(1, "59564898048", "Joao da Silva", "01/01/1990", "joao.silva@gmail.com",
+        final Usuario usuario1 = new Usuario(1, "59564898048", "Joao da Silva", "01/01/1990", "joao.silva@gmail.com",
                 "senha123", "Rua das Flores, 123, São Paulo, SP", "10/10/2020", "10/10/2020", true,
                 MetodoPgto.BOLETO_BANCARIO);
-        Usuario usuario2 = new Usuario(2, "93769781023", "Maria Souza", "05/05/1995", "maria.souza@gmail.com",
+        final Usuario usuario2 = new Usuario(2, "93769781023", "Maria Souza", "05/05/1995", "maria.souza@gmail.com",
                 "senha456", "Rua dos Pássaros, 456, Rio de Janeiro, RJ", "11/11/2020", "11/11/2020", true,
                 MetodoPgto.BOLETO_BANCARIO);
-        Usuario usuario3 = new Usuario(3, "24589837072", "José Costa", "07/07/1985", "jose.costa@gmail.com", "senha789",
+        final Usuario usuario3 = new Usuario(3, "24589837072", "José Costa", "07/07/1985", "jose.costa@gmail.com",
+                "senha789",
                 "Rua do Sol, 789, Belo Horizonte, MG", "12/12/2020", "12/12/2020", false, MetodoPgto.BOLETO_BANCARIO);
-        Usuario usuario4 = new Usuario(4, "57967297059", "Fulano de Tal", "12/12/2000", "fulano.tal@gmail.com",
+        final Usuario usuario4 = new Usuario(4, "57967297059", "Fulano de Tal", "12/12/2000", "fulano.tal@gmail.com",
                 "senha101", "Rua dos Jardins, 101, Brasília, DF", "01/01/2021", "01/01/2021", true,
                 MetodoPgto.DINHEIRO);
-        Usuario usuario5 = new Usuario(5, "02125328046", "Ciclano Soares", "09/09/1999", "ciclano.soares@gmail.com",
+        final Usuario usuario5 = new Usuario(5, "02125328046", "Ciclano Soares", "09/09/1999",
+                "ciclano.soares@gmail.com",
                 "senha202", "Rua dos Anjos, 202, Salvador, BA", "02/02/2021", "02/02/2021", true, MetodoPgto.DINHEIRO);
-        Usuario usuario6 = new Usuario(6, "82538353025", "Beltrano da Silva", "07/07/1998", "beltrano.silva@gmail.com",
+        final Usuario usuario6 = new Usuario(6, "82538353025", "Beltrano da Silva", "07/07/1998",
+                "beltrano.silva@gmail.com",
                 "senha303", "Rua das Estrelas, 303, Porto Alegre, RS", "03/03/2021", "03/03/2021", false,
                 MetodoPgto.DINHEIRO);
-        Administrador admin1 = new Administrador(1, "59564898048", "Mateus Soares", "01/01/1990",
+        final Administrador admin1 = new Administrador(1, "59564898048", "Mateus Soares", "01/01/1990",
                 "MateusSoares@gmail.com", "senha401", "Rua das Flores, 123, São Paulo, SP", "10/10/2020", 1, "Chefe");
-        ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
+        final ArrayList<Pessoa> pessoas = new ArrayList<Pessoa>();
         pessoas.add(usuario1);
         pessoas.add(usuario2);
         pessoas.add(usuario3);
@@ -53,74 +56,74 @@ public class App {
     }
 
     public static ArrayList<Conteudo> gerarConteudos() {
-        Artista artista1 = new Artista(1, "Marlon Brando",
+        final Artista artista1 = new Artista(1, "Marlon Brando",
                 "Marlon Brando Jr. foi um ator estadunidense, considerado um dos maiores atores de todos os tempos. Ele venceu o Oscar de Melhor Ator duas vezes, por seus papéis em A Malvada e O Poderoso Chefão.",
                 "03/04/1924", "01/07/2004");
-        Artista artista2 = new Artista(2, "Audrey Hepburn",
+        final Artista artista2 = new Artista(2, "Audrey Hepburn",
                 "Audrey Hepburn foi uma atriz britânica e filantropa, considerada uma das mais importantes e icônicas figuras do cinema mundial. Ela venceu o Oscar de Melhor Atriz em 1954, por seu papel em Bonequinha de Luxo.",
                 "04/05/1929", "20/01/1993");
-        Artista artista3 = new Artista(3, "Morgan Freeman",
+        final Artista artista3 = new Artista(3, "Morgan Freeman",
                 "Morgan Freeman é um ator, produtor e narrador estadunidense, vencedor do Oscar de Melhor Ator Coadjuvante por Invictus e vencedor do Grammy de Melhor Narração por Narração de Audiobooks por A Doutrina do Choque.",
                 "01/06/1937", "null");
-        Artista artista4 = new Artista(4, "Harrison Ford",
+        final Artista artista4 = new Artista(4, "Harrison Ford",
                 "Harrison Ford é um ator e produtor estadunidense, conhecido por seus papéis como Han Solo na saga Star Wars e Indiana Jones nas adaptações cinematográficas dos romances de aventura de mesmo nome.",
                 "13/07/1942", "null");
-        Artista artista5 = new Artista(5, "Tom Hanks",
+        final Artista artista5 = new Artista(5, "Tom Hanks",
                 "Tom Hanks é um ator e produtor estadunidense, vencedor de dois Oscars de Melhor Ator, por seus papéis em Forrest Gump e Philadelphia. Ele é também conhecido por seus papéis em filmes como O Terminal e O Código da Vinci.",
                 "09/07/1956", "null");
-        Artista artista6 = new Artista(6, "Meryl Streep",
+        final Artista artista6 = new Artista(6, "Meryl Streep",
                 "Mary Louise Streep é uma atriz e cantora estadunidense, considerada uma das atrizes mais talentosas de sua geração. Ela já venceu três Oscars de Melhor Atriz, por seus papéis em Kramer contra Kramer, A Escolha de Sofia e A Dama de Ferro.",
                 "22/06/1949", "null");
-        ArrayList<Artista> artistas1 = new ArrayList<Artista>();
+        final ArrayList<Artista> artistas1 = new ArrayList<Artista>();
         artistas1.add(artista1);
         artistas1.add(artista2);
 
-        ArrayList<Artista> artistas2 = new ArrayList<Artista>();
+        final ArrayList<Artista> artistas2 = new ArrayList<Artista>();
         artistas2.add(artista3);
         artistas2.add(artista4);
 
-        ArrayList<Artista> artistas3 = new ArrayList<Artista>();
+        final ArrayList<Artista> artistas3 = new ArrayList<Artista>();
         artistas3.add(artista5);
         artistas3.add(artista6);
-        ArrayList<String> audios = new ArrayList<>();
+        final ArrayList<String> audios = new ArrayList<>();
         audios.add("Português");
         audios.add("Ingles");
 
-        ArrayList<String> legendas = new ArrayList<>();
+        final ArrayList<String> legendas = new ArrayList<>();
         legendas.add("Japonês");
         legendas.add("Inglês");
-        Filme filme1 = new Filme(1, "O Poderoso Chefão",
+        final Filme filme1 = new Filme(1, "O Poderoso Chefão",
                 "O Poderoso Chefão é um filme de 1972 dirigido por Francis Ford Coppola e baseado no romance homônimo de Mario Puzo. O filme conta a história da família mafiosa Corleone e seus negócios ilegais, traições e rivalidades.",
                 "Drama", 1972, "Paramount Pictures", 140, Classificacao.LIVRE, artistas1, legendas, audios);
-        Filme filme2 = new Filme(2, "Bonequinha de Luxo",
+        final Filme filme2 = new Filme(2, "Bonequinha de Luxo",
                 "Bonequinha de Luxo é um filme de 1961 dirigido por Blake Edwards e baseado no romance homônimo de Truman Capote. O filme conta a história de Holly Golightly, uma jovem socialite que tenta se adaptar à vida na cidade de Nova York.",
                 "Comédia", 1961, "Paramount Pictures", 100, Classificacao.C10, artistas2, legendas, audios);
-        Filme filme3 = new Filme(3, "Invictus",
+        final Filme filme3 = new Filme(3, "Invictus",
                 "Invictus é um filme de 2009 dirigido por Clint Eastwood e baseado no livro Playing the Enemy, de John Carlin. O filme conta a história de como o presidente da África do Sul, Nelson Mandela, usou o rugby como ferramenta de reconciliação após o fim do apartheid.",
                 "Drama", 2009, "Warner Bros. Pictures", 150, Classificacao.C12, artistas3, legendas, audios);
-        Filme filme4 = new Filme(4, "Star Wars: O Império Contra-Ataca",
+        final Filme filme4 = new Filme(4, "Star Wars: O Império Contra-Ataca",
                 "Star Wars: O Império Contra-Ataca é um filme de 1980 dirigido por Irvin Kershner e é a continuação de Star Wars: Uma Nova Esperança. O filme acompanha o herói Luke Skywalker em sua jornada para se tornar um cavaleiro Jedi e lutar contra o Império Galáctico.",
                 "Ação", 1980, "Lucasfilm", 90, Classificacao.C14, artistas2, legendas, audios);
-        Filme filme5 = new Filme(5, "O Poderoso Chefão II",
+        final Filme filme5 = new Filme(5, "O Poderoso Chefão II",
                 "O Poderoso Chefão II é um filme de 1974 dirigido por Francis Ford Coppola e é a continuação de O Poderoso Chefão. O filme conta a história da família mafiosa Corleone e seus negócios ilegais, traições e rivalidades.",
                 "Drama", 1974, "Paramount Pictures", 75, Classificacao.C16, artistas3, legendas, audios);
-        Filme filme6 = new Filme(6, "E o Vento Levou",
+        final Filme filme6 = new Filme(6, "E o Vento Levou",
                 "E o Vento Levou é um filme de 1939 dirigido por Victor Fleming e baseado no romance homônimo de Margaret Mitchell. O filme conta a história de Scarlett O'Hara, uma jovem da alta sociedade sulista que luta para salvar sua fazenda e seus entes queridos durante a Guerra Civil Americana.",
                 "Drama", 1939, "Selznick International Pictures", 130, Classificacao.C18, artistas1, legendas, audios);
-        ArrayList<Episodio> episodios = new ArrayList<Episodio>();
+        final ArrayList<Episodio> episodios = new ArrayList<Episodio>();
         episodios.add(new Episodio(1, 53, 2, 1, "01/04/2012", "The North Remembers",
                 "O primeiro episódio da segunda temporada"));
         episodios.add(
                 new Episodio(2, 53, 2, 2, "08/04/2012", "The Night Lands", "O segundo episódio da segunda temporada"));
 
-        ArrayList<Artista> artistas4 = new ArrayList<Artista>();
+        final ArrayList<Artista> artistas4 = new ArrayList<Artista>();
         artistas4.add(new Artista(1, "Peter Dinklage", "Ator americano", "11/06/1969", null));
         artistas4.add(new Artista(2, "Lena Headey", "Atriz britânica", "03/10/1973", null));
-        Serie serie = new Serie(1, "Game of Thrones",
+        final Serie serie = new Serie(1, "Game of Thrones",
                 "Série de TV americana baseada na série de livros As Crônicas de Gelo e Fogo", "Drama", 2011, "HBO", 10,
                 2, episodios, Classificacao.C16, artistas4, legendas, audios);
 
-        ArrayList<Conteudo> conteudos = new ArrayList<Conteudo>();
+        final ArrayList<Conteudo> conteudos = new ArrayList<Conteudo>();
 
         conteudos.add(filme1);
         conteudos.add(filme2);
@@ -133,12 +136,12 @@ public class App {
         return conteudos;
     }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         System.out.println(new App().getGreeting());
-        ArrayList<Pessoa> pessoas = gerarPessoas();
-        ArrayList<Conteudo> conteudos = gerarConteudos();
+        final ArrayList<Pessoa> pessoas = gerarPessoas();
+        final ArrayList<Conteudo> conteudos = gerarConteudos();
 
-        SistemaStreaming sistemaStreaming = SistemaStreaming.getInstance();
+        final SistemaStreaming sistemaStreaming = SistemaStreaming.getInstance();
         sistemaStreaming.setPessoas(pessoas);
         sistemaStreaming.setConteudos(conteudos);
 

@@ -2,14 +2,14 @@ package totalflix.classes;
 
 public class Artista {
 
-    private int idArtista;
+    private final int idArtista;
     private String nomeArtista;
     private String biografia;
-    private String dataNascArtista;
+    private final String dataNascArtista;
     private String dataFalecimento;
 
-    public Artista(int idArtista, String nomeArtista, String biografia, String dataNascArtista,
-            String dataFalecimento) {
+    public Artista(final int idArtista, final String nomeArtista, final String biografia, final String dataNascArtista,
+            final String dataFalecimento) {
         this.idArtista = idArtista;
         this.nomeArtista = nomeArtista;
         this.biografia = biografia;
@@ -37,15 +37,15 @@ public class Artista {
         return dataNascArtista;
     }
 
-    public void setNome(String nomeArtista) {
+    public void setNome(final String nomeArtista) {
         this.nomeArtista = nomeArtista;
     }
 
-    public void setBiografia(String biografia) {
+    public void setBiografia(final String biografia) {
         this.biografia = biografia;
     }
 
-    public void setDataFalecimento(String dataFalecimento) {
+    public void setDataFalecimento(final String dataFalecimento) {
         this.dataFalecimento = dataFalecimento;
     }
 }

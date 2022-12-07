@@ -14,8 +14,9 @@ public abstract class Pessoa {
     protected String dataAdmissao;
     protected ArrayList<Perfil> perfis;
 
-    public Pessoa(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco,
-            String dataAdmissao) {
+    public Pessoa(final int id, final String cpf, final String nome, final String dataNascimento, final String email,
+            final String senha, final String endereco,
+            final String dataAdmissao) {
         this.id = id;
         this.cpf = cpf;
         this.nome = nome;
@@ -30,7 +31,7 @@ public abstract class Pessoa {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(final String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -38,15 +39,15 @@ public abstract class Pessoa {
         return endereco;
     }
 
-    public void setId(int id) {
+    public void setId(final int id) {
         this.id = id;
     }
 
-    public void setCpf(String cpf) {
+    public void setCpf(final String cpf) {
         this.cpf = cpf;
     }
 
-    public void setDataAdmissao(String dataAdmissao) {
+    public void setDataAdmissao(final String dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
 
@@ -70,7 +71,7 @@ public abstract class Pessoa {
         return dataAdmissao;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(final String senha) {
         this.senha = senha;
     }
 
@@ -78,15 +79,15 @@ public abstract class Pessoa {
         return senha;
     }
 
-    public void setEmail(String email) {
+    public void setEmail(final String email) {
         this.email = email;
     }
 
-    public void setEndereco(String endereco) {
+    public void setEndereco(final String endereco) {
         this.endereco = endereco;
     }
 
-    public void setNome(String nome) {
+    public void setNome(final String nome) {
         this.nome = nome;
     }
 
@@ -94,11 +95,11 @@ public abstract class Pessoa {
         return perfis;
     }
 
-    public void setPerfis(ArrayList<Perfil> perfis) {
+    public void setPerfis(final ArrayList<Perfil> perfis) {
         this.perfis = perfis;
     }
 
-    public void addPerfil(Perfil perfil) {
+    public void addPerfil(final Perfil perfil) {
         perfis.add(perfil);
     }
 

@@ -4,13 +4,15 @@ import java.util.ArrayList;
 
 public class Serie extends Conteudo {
 
-    private int qtdEps;
-    private int qtdTemps;
+    private final int qtdEps;
+    private final int qtdTemps;
     private ArrayList<Episodio> episodios;
 
-    public Serie(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora,
-            int qtdEps, int qtdTemps, ArrayList<Episodio> episodios, Classificacao classificacao,
-            ArrayList<Artista> artistas, ArrayList<String> legendas, ArrayList<String> audios) {
+    public Serie(final int idConteudo, final String titulo, final String descricao, final String categoria,
+            final int anoLancamento, final String produtora,
+            final int qtdEps, final int qtdTemps, final ArrayList<Episodio> episodios,
+            final Classificacao classificacao,
+            final ArrayList<Artista> artistas, final ArrayList<String> legendas, final ArrayList<String> audios) {
         super(idConteudo, titulo, descricao, categoria, anoLancamento, produtora, classificacao, artistas, legendas,
                 audios);
         this.qtdEps = qtdEps;
@@ -26,11 +28,11 @@ public class Serie extends Conteudo {
         return qtdTemps;
     }
 
-    public int setQtdEps(int qtdEps) {
+    public int setQtdEps(final int qtdEps) {
         return qtdEps;
     }
 
-    public int setQtdTemps(int qtdTemps) {
+    public int setQtdTemps(final int qtdTemps) {
         return qtdTemps;
     }
 
@@ -38,7 +40,7 @@ public class Serie extends Conteudo {
         return episodios;
     }
 
-    public void setEpisodios(ArrayList<Episodio> episodios) {
+    public void setEpisodios(final ArrayList<Episodio> episodios) {
         this.episodios = episodios;
     }
 }

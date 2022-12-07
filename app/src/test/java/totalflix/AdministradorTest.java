@@ -1,6 +1,6 @@
 package totalflix;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -10,7 +10,8 @@ public class AdministradorTest {
 
     @Test
     public void testConstructor() {
-        Administrador admin = new Administrador(1, "123.456.789-10", "João da Silva", "01/01/1970", "joao@silva.com",
+        final Administrador admin = new Administrador(1, "123.456.789-10", "João da Silva", "01/01/1970",
+                "joao@silva.com",
                 "senha123", "Rua das Flores, 123", "01/01/2010", 3, "Gerente de TI");
 
         assertEquals(1, admin.getId());

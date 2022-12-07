@@ -10,8 +10,8 @@ import totalflix.classes.Usuario;
 public class UsuarioTest {
     @Test
     public void testConstructor() {
-        MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
-        Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com",
+        final MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
+        final Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com",
                 "senha123", "Rua das Flores, 123", "01/01/2020", "01/02/2020", true, metodoPgto);
         assertEquals(1, usuario.getId());
         assertEquals("123.456.789-10", usuario.getCpf());
@@ -28,8 +28,8 @@ public class UsuarioTest {
 
     @Test
     public void testMesGratuito() {
-        MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
-        Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com",
+        final MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
+        final Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com",
                 "senha123", "Rua das Flores, 123", "01/01/2020", "01/02/2020", true, metodoPgto);
         assertEquals(true, usuario.isMesGratuitoAtivo());
         usuario.encerrarGratuitade();

@@ -15,9 +15,11 @@ public abstract class Conteudo {
     private ArrayList<String> legendas;
     private ArrayList<String> audios;
 
-    public Conteudo(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento,
-            String produtora, Classificacao classificacao, ArrayList<Artista> artistas, ArrayList<String> legendas,
-            ArrayList<String> audios) {
+    public Conteudo(final int idConteudo, final String titulo, final String descricao, final String categoria,
+            final int anoLancamento,
+            final String produtora, final Classificacao classificacao, final ArrayList<Artista> artistas,
+            final ArrayList<String> legendas,
+            final ArrayList<String> audios) {
         this.idConteudo = idConteudo;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -34,7 +36,7 @@ public abstract class Conteudo {
         return legendas;
     }
 
-    public void setLegendas(ArrayList<String> legendas) {
+    public void setLegendas(final ArrayList<String> legendas) {
         this.legendas = legendas;
     }
 
@@ -42,7 +44,7 @@ public abstract class Conteudo {
         return audios;
     }
 
-    public void setAudios(ArrayList<String> audios) {
+    public void setAudios(final ArrayList<String> audios) {
         this.audios = audios;
     }
 
@@ -50,7 +52,7 @@ public abstract class Conteudo {
         return classificacao;
     }
 
-    public void setClassificacao(Classificacao classificacao) {
+    public void setClassificacao(final Classificacao classificacao) {
         this.classificacao = classificacao;
     }
 
@@ -58,7 +60,7 @@ public abstract class Conteudo {
         return artistas;
     }
 
-    public void setArtistas(ArrayList<Artista> artistas) {
+    public void setArtistas(final ArrayList<Artista> artistas) {
         this.artistas = artistas;
     }
 
@@ -86,31 +88,31 @@ public abstract class Conteudo {
         return produtora;
     }
 
-    public void setIdConteudo(int idConteudo) {
+    public void setIdConteudo(final int idConteudo) {
         this.idConteudo = idConteudo;
     }
 
-    public void setTitulo(String titulo) {
+    public void setTitulo(final String titulo) {
         this.titulo = titulo;
     }
 
-    public void setDescricao(String descricao) {
+    public void setDescricao(final String descricao) {
         this.descricao = descricao;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(final String categoria) {
         this.categoria = categoria;
     }
 
-    public void setAnoLancamento(int anoLancamento) {
+    public void setAnoLancamento(final int anoLancamento) {
         this.anoLancamento = anoLancamento;
     }
 
-    public void setProdutora(String produtora) {
+    public void setProdutora(final String produtora) {
         this.produtora = produtora;
     }
 
-    public void addLegenda(String legenda) {
+    public void addLegenda(final String legenda) {
         this.legendas.add(legenda);
     }
 }

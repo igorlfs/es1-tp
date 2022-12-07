@@ -1,6 +1,6 @@
 package totalflix;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import totalflix.classes.Perfil;
 public class PerfilTest {
     @Test
     public void testConstructor() {
-        Perfil perfil = new Perfil("Família", false);
+        final Perfil perfil = new Perfil("Família", false);
 
         assertEquals("Família", perfil.getNomePerfil());
         assertEquals(false, perfil.getRestricaoInfantil());

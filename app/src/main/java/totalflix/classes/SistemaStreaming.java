@@ -4,55 +4,57 @@ import java.util.ArrayList;
 
 public class SistemaStreaming {
 
+    private static SistemaStreaming sistemaInstancia = new SistemaStreaming();
+
+    public static SistemaStreaming getInstance() {
+        return sistemaInstancia;
+    }
+
     private boolean logado;
     private Pessoa pessoaLogada;
+
     private ArrayList<Pessoa> pessoas;
+
     private ArrayList<Conteudo> conteudos;
-
-    public Pessoa gePessoaLogada() {
-        return pessoaLogada;
-    }
-
-    public void setPessoaLogada(Pessoa pessoaLogada) {
-        this.pessoaLogada = pessoaLogada;
-    }
-
-    private static SistemaStreaming sistemaInstancia = new SistemaStreaming();
 
     // Será implementado no futuro
     private SistemaStreaming() {
+    }
+
+    public Pessoa getPessoaLogada() {
+        return pessoaLogada;
+    }
+
+    public void setPessoaLogada(final Pessoa pessoaLogada) {
+        this.pessoaLogada = pessoaLogada;
     }
 
     public boolean isLogado() {
         return logado;
     }
 
-    public void setLogado(boolean logado) {
+    public void setLogado(final boolean logado) {
         this.logado = logado;
     }
 
-    public void setPessoas(ArrayList<Pessoa> pessoas) {
+    public void setPessoas(final ArrayList<Pessoa> pessoas) {
         this.pessoas = pessoas;
     }
 
-    public void setConteudos(ArrayList<Conteudo> conteudos) {
+    public void setConteudos(final ArrayList<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
 
-    public static SistemaStreaming getInstance() {
-        return sistemaInstancia;
-    }
-
-    public void addUsuario(Usuario usuario) {
+    public void addUsuario(final Usuario usuario) {
         pessoas.add(usuario);
     }
 
-    public void addConteudo(Conteudo conteudo) {
+    public void addConteudo(final Conteudo conteudo) {
         conteudos.add(conteudo);
     }
 
-    public void fazerLogin(String email, String senha) {
-        for (Pessoa pessoa : pessoas) {
+    public void fazerLogin(final String email, final String senha) {
+        for (final Pessoa pessoa : pessoas) {
             if ((pessoa) instanceof Usuario) {
                 if (pessoa.getEmail() == email) {
                     if (pessoa.getSenha() == senha) {
@@ -83,7 +85,7 @@ public class SistemaStreaming {
         }
     }
 
-    public void alertLogado(String alert) {
+    public void alertLogado(final String alert) {
         if (logado)
             System.out.println(alert + " logado: " + pessoaLogada.getNome());
         else
@@ -93,7 +95,7 @@ public class SistemaStreaming {
     public void listarConteudos() {
         System.out.println("Conteúdos: \n");
         String tipo;
-        for (Conteudo conteudo : conteudos) {
+        for (final Conteudo conteudo : conteudos) {
             if ((conteudo) instanceof Filme) {
                 tipo = "Filme";
             } else {
@@ -106,7 +108,7 @@ public class SistemaStreaming {
     public void listarUsuarios() {
         if (logado == true && pessoaLogada instanceof Administrador) {
             System.out.println("Usuários: \n");
-            for (Pessoa pessoa : pessoas) {
+            for (final Pessoa pessoa : pessoas) {
                 System.out.println("Nome: " + pessoa.getNome() + "\n");
             }
         } else {

@@ -1,6 +1,6 @@
 package totalflix;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import totalflix.classes.Episodio;
 public class EpisodioTest {
     @Test
     public void testConstructor() {
-        Episodio episodio = new Episodio(1, 53, 2, 1, "01/04/2012", "The North Remembers",
+        final Episodio episodio = new Episodio(1, 53, 2, 1, "01/04/2012", "The North Remembers",
                 "O primeiro episódio da segunda temporada");
         assertEquals(1, episodio.getIdEp());
         assertEquals(53, episodio.getDuracaoEp());

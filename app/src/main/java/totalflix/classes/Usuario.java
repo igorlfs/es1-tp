@@ -7,21 +7,23 @@ public class Usuario extends Pessoa {
     private MetodoPgto metodoPgto;
     private boolean mesGratuito;
 
-    public MetodoPgto getMetodoPgto() {
-        return metodoPgto;
-    }
-
-    public void setMetodoPgto(MetodoPgto metodoPgto) {
-        this.metodoPgto = metodoPgto;
-    }
-
-    public Usuario(int id, String cpf, String nome, String dataNascimento, String email, String senha, String endereco,
-            String dataCriacao, String dataAssinatura, boolean assinaturaAtiva, MetodoPgto metodoPgto) {
+    public Usuario(final int id, final String cpf, final String nome, final String dataNascimento, final String email,
+            final String senha, final String endereco,
+            final String dataCriacao, final String dataAssinatura, final boolean assinaturaAtiva,
+            final MetodoPgto metodoPgto) {
         super(id, cpf, nome, dataNascimento, email, senha, endereco, dataCriacao);
         this.assinaturaAtiva = assinaturaAtiva;
         this.dataAssinatura = dataAssinatura;
         this.metodoPgto = metodoPgto;
         this.mesGratuito = true;
+    }
+
+    public MetodoPgto getMetodoPgto() {
+        return metodoPgto;
+    }
+
+    public void setMetodoPgto(final MetodoPgto metodoPgto) {
+        this.metodoPgto = metodoPgto;
     }
 
     public boolean isMesGratuitoAtivo() {
@@ -44,7 +46,7 @@ public class Usuario extends Pessoa {
         return dataAssinatura;
     }
 
-    public void setDataAssinatura(String dataAssinatura) {
+    public void setDataAssinatura(final String dataAssinatura) {
         this.dataAssinatura = dataAssinatura;
     }
 
