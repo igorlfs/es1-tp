@@ -26,6 +26,7 @@ public class UsuarioTest {
         assertEquals(MetodoPgto.BOLETO_BANCARIO, usuario.getMetodoPgto());
     }
 
+    @Test
     public void testMesGratuito() {
         MetodoPgto metodoPgto = MetodoPgto.BOLETO_BANCARIO;
         Usuario usuario = new Usuario(1, "123.456.789-10", "Fulano da Silva", "01/01/1990", "fulano@email.com",

@@ -13,6 +13,7 @@ import totalflix.classes.Serie;
 
 public class SerieTest {
 
+    @Test
     public void testConstructor() {
         ArrayList<Artista> artistas = new ArrayList<>();
         artistas.add(new Artista(1, "João da Silva", "Biografia de João da Silva", "01/01/1900", "01/01/2000"));
