@@ -4,11 +4,12 @@ public class Artista {
 
     private int idArtista;
     private String nomeArtista;
-    protected String biografia;
-    private LocalDate dataNascArtista;
-    private LocalDate dataFalecimento;
+    private String biografia;
+    private String dataNascArtista;
+    private String dataFalecimento;
 
-    public Artista(int idArtista, String nomeArtista, String biografia, LocalDate dataNascArtista, LocalDate dataFalecimento) {
+    public Artista(int idArtista, String nomeArtista, String biografia, String dataNascArtista,
+            String dataFalecimento) {
         this.idArtista = idArtista;
         this.nomeArtista = nomeArtista;
         this.biografia = biografia;
@@ -20,7 +21,7 @@ public class Artista {
         return idArtista;
     }
 
-    public LocalDate getDataFalecimento() {
+    public String getDataFalecimento() {
         return dataFalecimento;
     }
 
@@ -32,19 +33,19 @@ public class Artista {
         return biografia;
     }
 
-    public LocalDate getDataNascArtista() {
+    public String getDataNascArtista() {
         return dataNascArtista;
     }
 
-    public String mudarNome(String nomeArtista) {
+    public void setNome(String nomeArtista) {
         this.nomeArtista = nomeArtista;
     }
 
-    public String mudarBiografia(String biografia) {
+    public void setBiografia(String biografia) {
         this.biografia = biografia;
     }
-    
-    public LocalDate setDataFalecimento(LocalDate dataFalecimento) {
+
+    public void setDataFalecimento(String dataFalecimento) {
         this.dataFalecimento = dataFalecimento;
     }
 }

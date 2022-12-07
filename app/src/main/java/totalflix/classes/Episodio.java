@@ -5,17 +5,16 @@ public class Episodio {
     private int idEp;
     private int duracaoEp;
     private int temporada;
-    private int idSerie;
-    protected int numEp;
-    protected LocalDate dataLancamento;
-    protected String tituloEp;
-    protected String descricaoEp;
+    private int numEp;
+    private String dataLancamento;
+    private String tituloEp;
+    private String descricaoEp;
 
-    public Episodio(int idEp, int duracaoEp, int temporada, int idSerie, int numEp, LocalDate dataLancamento, String tituloEp, String descricaoEp) {
+    public Episodio(int idEp, int duracaoEp, int temporada, int numEp, String dataLancamento, String tituloEp,
+            String descricaoEp) {
         this.idEp = idEp;
         this.duracaoEp = duracaoEp;
         this.temporada = temporada;
-        this.idSerie = idSerie;
         this.numEp = numEp;
         this.dataLancamento = dataLancamento;
         this.tituloEp = tituloEp;
@@ -34,15 +33,11 @@ public class Episodio {
         return temporada;
     }
 
-    public int getIdSerie() {
-        return idSerie;
-    }
-
     public int getNumEp() {
         return numEp;
     }
 
-    public LocalDate getDataLancamento() {
+    public String getDataLancamento() {
         return dataLancamento;
     }
 
@@ -54,23 +49,23 @@ public class Episodio {
         return descricaoEp;
     }
 
-    public String mudarTitulo(String tituloEp) {
+    public void setTitulo(String tituloEp) {
         this.tituloEp = tituloEp;
     }
 
-    public String mudarDescricao(String descricaoEp) {
+    public void setDescricao(String descricaoEp) {
         this.descricaoEp = descricaoEp;
     }
 
-    public LocalDate mudarDataLancamento(LocalDate dataLancamento) {
+    public void setDataLancamento(String dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
 
-    public int mudarNumEp(int numEp) {
+    public void setNumEp(int numEp) {
         this.numEp = numEp;
     }
 
-    public int mudarDuracao(int duracaoEp) {
+    public void setDuracao(int duracaoEp) {
         this.duracaoEp = duracaoEp;
     }
 }

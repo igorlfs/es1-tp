@@ -1,6 +1,8 @@
 package totalflix.classes;
 
-public class Conteudo {
+import java.util.ArrayList;
+
+public abstract class Conteudo {
 
     private int idConteudo;
     protected String titulo;
@@ -8,16 +10,58 @@ public class Conteudo {
     protected String categoria;
     protected int anoLancamento;
     protected String produtora;
+    private ArrayList<Artista> artistas;
+    private Classificacao classificacao;
+    private ArrayList<String> legendas;
+    private ArrayList<String> audios;
 
-    public Conteudo(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento, String produtora) {
+    public Conteudo(int idConteudo, String titulo, String descricao, String categoria, int anoLancamento,
+            String produtora, Classificacao classificacao, ArrayList<Artista> artistas, ArrayList<String> legendas,
+            ArrayList<String> audios) {
         this.idConteudo = idConteudo;
         this.titulo = titulo;
         this.descricao = descricao;
         this.categoria = categoria;
         this.anoLancamento = anoLancamento;
         this.produtora = produtora;
+        this.artistas = artistas;
+        this.classificacao = classificacao;
+        this.legendas = legendas;
+        this.audios = audios;
     }
-    
+
+    public ArrayList<String> getLegendas() {
+        return legendas;
+    }
+
+    public void setLegendas(ArrayList<String> legendas) {
+        this.legendas = legendas;
+    }
+
+    public ArrayList<String> getAudios() {
+        return audios;
+    }
+
+    public void setAudios(ArrayList<String> audios) {
+        this.audios = audios;
+    }
+
+    public Classificacao getClassificacao() {
+        return classificacao;
+    }
+
+    public void setClassificacao(Classificacao classificacao) {
+        this.classificacao = classificacao;
+    }
+
+    public ArrayList<Artista> getArtistas() {
+        return artistas;
+    }
+
+    public void setArtistas(ArrayList<Artista> artistas) {
+        this.artistas = artistas;
+    }
+
     public int getIdConteudo() {
         return idConteudo;
     }
@@ -64,5 +108,9 @@ public class Conteudo {
 
     public void setProdutora(String produtora) {
         this.produtora = produtora;
+    }
+
+    public void addLegenda(String legenda) {
+        this.legendas.add(legenda);
     }
 }
